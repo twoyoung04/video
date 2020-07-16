@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="content-language" content="zh-cn">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="{% static 'css/base.css' %}" media='screen and (min-width: 480px)'>
+    <link rel='stylesheet' href="{% static 'css/baseMobile.css' %}" media='screen and (max-width: 479px)'>
+    <link href="http://vjs.zencdn.net/5.5.3/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.8.1/skins/default/aliplayer-min.css" />
+    <script type="text/javascript" charset="utf-8" src="https://g.alicdn.com/de/prismplayer/2.8.1/aliplayer-min.js"></script>
+  </head>
+
+<!--BODY_START-->
+<body>
+
+<!--    HOME_SECTION_START-->
+    <div class="home-section">
+        <div class="nav">
+
+            <ul class="nav-list">
+                <li class="nav-item-first">
+
+                    <img src="{% static 'img/yon.jpg' %}" width="48px" height="48px" class="avator">
+                </li>
+                <li class="nav-item"><a href="#">HOME</a></li>
+                <li class="nav-item"><a href="#intro">INTRO</a></li>
+                <li class="nav-item"><a href="#skill">SKILL</a></li>
+                <li class="nav-item"><a href="#mood">MOOD</a></li>
+                <li class="nav-item"><a href="#photo">PHOTO</a></li>
+                <li class="nav-item"><a href="#more">MORE</a></li>
+                <li class="nav-item-right">ZH/EN</li>
+            </ul>
+        </div>
+    </div>
+<!--    HOME_SECTION_END-->
+
+<!--    INTRO_SECTION_START-->
+    <div class="intro-section divider">
+        <div class="wrapper">
+            <div class="intro-text">
+                <div class="headline">
+                    Section-1
+                </div>
+                <p>html模版是随便用的自己以前写的一个</p>
+{#                <h2>index</h2>#}
+            </div>
+
+{#            {% if movie_list %}#}
+{#                <ul>#}
+{#                {% for movie in movie_list %}#}
+{#                    <li><a href="">{{ movie.movie_title }}</a></li>#}
+{#                {% endfor %}#}
+{#                </ul>#}
+{#            {% else %}#}
+{#                <p>No movies are available.</p>#}
+{#            {% endif %}#}
+            <a href="{% url 'play:upload' %}" style="color: red; text-decoration: underline">点击开始推送视频流</a>
+            <h1>阿里云播放器</h1><label>目前还拉流不成功</label>
+        <div class="prism-player" id="player-con"></div>
+
+        </div>
+    </div>
+<!--    INTRO_SECTION_END-->
+
+<!--    SKILL_SECTION_START-->
+    <a id="skill" href="#skill"></a>
+    <div class="skill-section divider alternate-bg">
+        <div class="wrapper">
+        <div class="headline">
+            Section-2
+        </div>
+            <h1>video.js</h1><label>目前还拉流不成功</label>
+            <video
+                id="my-player"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="{% static 'else/poster.png' %}"
+                data-setup='{}'>
+                 <source
+                 src="http://localhost:1935/zbcs/room"
+                 type="rtmp/flv">
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+              </p>
+            </video>
+
+        </div>
+    </div>
+<!--    SKILL_SECTION_END-->
+
+<script src="http://vjs.zencdn.net/5.5.3/video.js"></script>
+<script>
+var player = new Aliplayer({
+  "id": "player-con",
+  "source": "http://localhost:1935/zbcs/room",
+  "width": "100%",
+  "height": "500px",
+  "autoplay": true,
+  "isLive": false,
+  "rePlay": true,
+  "playsinline": true,
+  "preload": true,
+  "controlBarVisibility": "hover",
+  "useH5Prism": true
+}, function (player) {
+    player._switchLevel = 0;
+    console.log("player is established");
+  }
+);
+
+</script>
+</body>
+
+
+
+
+
+
+
+

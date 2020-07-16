@@ -1,0 +1,112 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}html,body{height:100%;margin:0}a{cursor:pointer;text-decoration: none;color: inherit}
+
+.wrapper {
+	width: 24em;
+	margin: 0 auto;
+    padding: 2em;
+    overflow: hidden;
+    min-height: 580px;
+}
+
+.wrapper-head {
+	width: 24em;
+	margin: 0 auto;
+    overflow: hidden;
+}
+
+.alternate-bg {
+    background-color: #FBFBFB;
+}
+
+.headline {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.head {
+/*	background-color: #33bb33;*/
+	width: 300px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-left:2em;
+/*	height: 44px;*/
+/*    margin-bottom: 1em;*/
+
+}
+.head .nav {
+/*    font-weight: bold;*/
+    color:#A3ABB3;
+}
+.head .nav .nav-list {
+	float: left;
+	line-height: 44px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling:touch;
+    white-space: nowrap;
+}
+
+.nav-item {
+    padding-right: 1em;
+	padding-left: 1em;
+    margin-left: 20px;
+    display: inline-block;
+    
+}
+.head .nav .nav-list li:hover {
+    color: #222;
+}
+
+
+.intro {
+/*    background-color: greenyellow;*/
+    
+}
+.intro-text{
+    margin-left: 2em;
+    max-width: 64%;
+    
+}
+.intro-text h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+.intro-text p {
+    color: #A3ABB3;
+}
+
+.skill {
+/*    background-color: azure;*/
+}
+
+.mood {
+/*    background-color: aquamarine;*/
+    min-height: 580px;
+    padding: 2em;
+    margin: 0 auto;
+    transition: background 0.5s;
+}
+
+.mood input {
+  margin-top: 250px;
+  transform: translateY(-50%);
+  width: 100%;
+  border: none;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 24px 22%;
+  box-sizing: border-box;
+  font-size: 48px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: bold;
+  outline: 0;
+}
+
+
+
+
+
+
+
+
+
+
