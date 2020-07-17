@@ -58,7 +58,8 @@ ROOT_URLCONF = 'video.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'play/templates/play')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

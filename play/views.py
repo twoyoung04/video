@@ -18,6 +18,14 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Movie.objects.all()
 
+
+class LiveView(generic.TemplateView):
+    template_name = 'play/live.html'
+
+    def get_context_data(self, **kwargs):
+        ffmpeg_stream_upload(self)
+        return
+
 def ffmpeg_stream_upload(self):
     rtmpUrl = "rtmp://localhost:1935/zbcs/room"
     file_path = '/Users/dft/project/video/static/else/Feng.mp4'

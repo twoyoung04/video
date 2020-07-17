@@ -6,5 +6,5 @@ app_name = 'play'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name = 'index'),
-    path('upload/', views.ffmpeg_stream_upload, name = 'upload')
+    path('live/', views.LiveView.as_view(), name = 'live')
 ]
